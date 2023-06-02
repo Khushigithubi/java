@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>j3</title>
+</head>
+<body>
+    <h2>Java Type Casting</h2>
+    <p>Type casting is when you assign a value of one primitive data type to another type.<br>
+       In Java, there are two types of casting:</p>
+    <ul><li>Widening Casting (automatically) - converting a smaller type to a larger type size<br>
+        byte -> short -> char -> int -> long -> float -> double</li> 
+        <li>Narrowing Casting (manually) - converting a larger type to a smaller size type<br>
+        double -> float -> long -> int -> char -> short -> byte></li></ul>
+    <h2>Widening Casting</h2>    
+    <p>Widening casting is done automatically when passing a smaller size type to a larger size type</p>
+    <p>Example:<br><br>
+        public class Main {<br>
+            public static void main(String[] args) {<br>
+              int myInt = 9;<br>
+              double myDouble = myInt; // Automatic casting: int to double<br><br>
+              System.out.println(myInt);  <br>    
+              System.out.println(myDouble);   <br>
+            }<br>
+          }</p>
+     <h2>Narrowing Casting</h2>    
+     <p>Narrowing casting must be done manually by placing the type in parentheses in front of the value</p> 
+     <p>Example:<br><br>
+        public class Main {<br>
+            public static void main(String[] args) {<br>
+              double myDouble = 9.78d;<br>
+              int myInt = (int) myDouble; // Manual casting: double to int<br>
+              System.out.println(myDouble); <br>
+              System.out.println(myInt); <br>    
+            }<br>
+          }</p>
+          <h2>Java Operators</h2>
+          <p>Operators are used to perform operations on variables and values.<br>
+           In the example below, we use the + operator to add together two values.</p>
+           <p>Example:<br>int x = 100 + 50;</p>
+           <p>Java divides the operators into the following groups:</p>
+           <ul><li>Arithmetic operators</li>
+              <li>Assignment operators</li>
+              <li>Comparison operators</li>
+              <li>Logical operators</li>
+              <li>Bitwise operators</li>
+            </ul>
+            <h2>Arithmetic Operators</h2>
+            <p>Arithmetic operators are used to perform common mathematical operations.</p>
+            <table>
+                <tbody><tr>
+                <th style="width:15%">Operator</th>
+                <th style="width:18%">Name</th>
+                <th style="width:40%">Description</th>
+                <th style="width:17%;">Example</th>
+                </tr>
+                <tr>
+                <td>+</td>
+                <td>Addition</td>
+                <td>Adds together two values</td>
+                <td>x + y</td>
+                </tr>
+                <tr>
+                <td>-</td>
+                <td>Subtraction</td>
+                <td>Subtracts one value from another</td>
+                <td>x - y</td>
+                </tr>
+                <tr>
+                <td>*</td>
+                <td>Multiplication</td>
+                <td>Multiplies two values</td>
+                <td>x * y</td>
+                </tr>
+                <tr>
+                <td>/</td>
+                <td>Division</td>
+                <td>Divides one value by another</td>
+                <td>x / y</td>
+                </tr>
+                <tr>
+                <td>%</td>
+                <td>Modulus</td>
+                <td>Returns the division remainder</td>
+                <td>x % y</td>
+                </tr>
+                <tr>
+                <td>++</td>
+                <td>Increment</td>
+                <td>Increases the value of a variable by 1</td>
+                <td>++x</td>
+                </tr>
+                <tr>
+                <td>--</td>
+                <td>Decrement</td>
+                <td>Decreases the value of a variable by 1</td>
+                <td>--x</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2>Java Assignment Operators</h2>
+                <p>Assignment operators are used to assign values to variables.</p>
+                <p>In the example below, we use the <strong>assignment</strong> operator
+                to assign the value <strong>10</strong> to a variable called <strong>x</strong>:</p>
+                <p>Example<br><br>int x = 10;</p>
+                <p>The <strong>addition assignment</strong> operator (+=) adds a value to a variable:</p>
+                <p>Example<br><br>int x = 10;<br>x += 5;</p>
+                <p>A list of all assignment operators:</p>
+                <table>
+                <tr>
+                <th style="width:30%">Operator</th>
+                <th style="width:30%">Example</th>
+                <th style="width:30%">Same As</th>
+                </tr>
+                <tr>
+                <td>=</td>
+                <td>x = 5</td>
+                <td>x = 5</td>
+                </tr>
+                  <tr>
+                <td>+=</td>
+                <td>x += 3</td>
+                <td>x = x + 3</td>
+                  </tr>
+                  <tr>
+                <td>-=</td>
+                <td>x -= 3</td>
+                <td>x = x - 3
+                  </tr>
+                  <tr>
+                <td>*=</td>
+                <td>x *= 3</td>
+                <td>x = x * 3</td>
+                  </tr>
+                  <tr>
+                <td>/=</td>
+                <td>x /= 3</td>
+                <td>x = x / 3</td>
+                  </tr>
+                  <tr>
+                <td>%=</td>
+                <td>x %= 3</td>
+                <td>x = x % 3</td>
+                  </tr>
+                  <tr>
+                <td>&amp;=</td>
+                <td>x &amp;= 3</td>
+                <td>x = x &amp; 3</td>
+                  </tr>
+                  <tr>
+                <td>|=</td>
+                <td>x |= 3</td>
+                <td>x = x | 3</td>
+                  </tr>
+                <tr>
+                <td>^=</td>
+                <td>x ^= 3</td>
+                <td>x = x ^ 3</td>
+                </tr>
+                <tr>
+                <td>&gt;&gt;=</td>
+                <td>x &gt;&gt;= 3</td>
+                <td>x = x &gt;&gt; 3</td>
+                </tr>
+                <tr>
+                <td>&lt;&lt;=</td>
+                <td>x &lt;&lt;= 3</td>
+                <td>x = x &lt;&lt; 3</td>
+                </tr>
+                </table>
+                <h2>Java Comparison Operators</h2>
+                <p>Comparison operators are used to compare two values (or variables). This is important in programming, because it helps us to find answers and make decisions.</p>
+                <p>The return value of a comparison is either true or false. These values are known as 
+                <em>Boolean values</em></p>
+                <p>In the following example, we use the <strong>greater than</strong> operator (>) to find out if 5 is greater than 3:</p>
+                <p>Example<br><br>
+                 int x = 5;<br>
+                int y = 3;<br>
+                System.out.println(x &gt; y);</p>
+                <table>
+                <tr>
+                <th style="width:25%">Operator</th>
+                <th style="width:35%">Name</th>
+                <th style="width:30%">Example</th>
+                </tr>
+                <tr>
+                <td>==</td>
+                <td>Equal to</td>
+                <td>x == y</td>
+                </tr>
+                <tr>
+                <td>!=</td>
+                <td>Not equal</td>
+                <td>x != y</td>
+                </tr>
+                <tr>
+                <td>&gt;</td>
+                <td>Greater than</td>
+                <td>x &gt; y</td>
+                </tr>
+                <tr>
+                <td>&lt;</td>
+                <td>Less than</td>
+                <td>x &lt; y</td>
+                </tr>
+                  <tr>
+                <td>&gt;=</td>
+                <td>Greater than or equal to</td>
+                <td>x &gt;= y</td>
+                  </tr>
+                <tr>
+                <td>&lt;=</td>
+                <td>Less than or equal to</td>
+                <td>x &lt;= y</td>
+                </tr>
+                </table>
+                 <h2>Java Logical Operators</h2>
+                <p>You can also test for true or false values with logical operators.</p>
+                <p>Logical operators are used to determine the logic between variables or  values:</p>
+                <table>
+                <tr>
+                <th style="width:15%">Operator</th>
+                <th style="width:20%">Name</th>
+                <th style="width:35%">Description</th>
+                <th style="width:20%">Example</th>
+                </tr>
+                <tr>
+                <td>&amp;&amp;&nbsp;</td>
+                <td>Logical and</td>
+                <td>Returns true if both statements are true</td>
+                <td>x &lt; 5 &amp;&amp;&nbsp; x &lt; 10</td>
+                </tr>
+                <tr>
+                <td>||&nbsp;</td>
+                <td>Logical or</td>
+                <td>Returns true if one of the statements is true</td>
+                <td>x &lt; 5 || x &lt; 4</td>
+                </tr>
+                <tr>
+                <td>!</td>
+                <td>Logical not</td>
+                <td>Reverse the result, returns false if the result is true</td>
+                <td>!(x &lt; 5 &amp;&amp; x &lt; 10)</td>
+                </tr>
+                </table>
+               
+</body>
+</html>

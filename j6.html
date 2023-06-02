@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>j6</title>
+</head>
+<body>
+    <h1>Java While Loop</h1>
+<h2>Loops</h2>
+<p>Loops can execute a block of code as long as a specified condition is reached.</p>
+<p>Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+<h2>Java While Loop</h2>
+<p>The while loop loops through a block of code as long as a specified condition is true:</p>
+<div>
+<h3>Syntax</h3>
+while (<em>condition</em>) {<br>
+<i>&nbsp; // code block to be executed</i><br>
+}
+</div>
+<p>In the example below, the code in the loop will run, over and over again, as long as 
+a variable (i) is less than 5:</p>
+<div>
+<h3>Example</h3>
+int i = 0;<br>
+while (i &lt; 5) {<br>
+  System.out.println(i);<br>
+  i++;<br>
+}
+</div>
+<div>
+<p><strong>Note:</strong> Do not forget to increase the variable used in the condition, otherwise the loop will never end!</p>
+</div>
+<h2>The Do/While Loop</h2>
+<p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will<br>
+repeat the loop as long as the condition is true.</p>
+<div>
+<h3>Syntax</h3>
+do {<br>
+<i>&nbsp; // code block to be executed<br></i>}<br>
+while (<em>condition</em>);<br>
+</div>
+<p>The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false, because the code block <br>
+is executed before the condition is tested:</p>
+<div>
+<h3>Example</h3>
+int i = 0;<br>do {<br>
+&nbsp;&nbsp;System.out.println(i);<br>
+&nbsp;&nbsp;i++;<br>
+}<br>
+while (i &lt; 5);<br>
+</div>
+<div>
+<p>Do not forget to increase the variable used in the condition, otherwise 
+the loop will never end!</p>
+</div>
+<h1>Java For Loop</h1>
+<p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
+<div>
+<h3>Syntax</h3>
+for (<i>statement 1</i>;<i> statement 2</i>;<i> statement 3</i>) {<br>
+&nbsp; <i>// code block to be executed</i><br>
+}
+</div>
+<p><strong>Statement 1</strong> is executed (one time) before the execution of the code block.</p>
+<p><strong>Statement 2</strong> defines the condition for executing the code block.</p>
+<p><strong>Statement 3</strong> is executed (every time) after the code block has been executed.</p>
+<p>The example below will print the numbers 0 to 4:</p>
+<div>
+<h3>Example</h3>
+for (int i = 0; i &lt; 5; i++) {<br>
+&nbsp;&nbsp;System.out.println(i);<br>
+}<br>
+</div>
+<h4>Example explained</h4>
+<p>Statement 1 sets a variable before the loop starts (int i = 0).</p>
+<p>Statement 2 defines the condition for the loop to run (i must be less than 
+5). If the condition is true, the loop will start over again, if it is false, 
+the loop will end.</p>
+<p>Statement 3 increases a value (i++) each time the code block in the loop has 
+been executed.</p>
+<h2>Another Example</h2>
+<p>This example will only print even values between 0 and 10:</p>
+<div>
+<h3>Example</h3>
+for (int i = 0; i &lt;= 10; i = i + 2) {<br>
+&nbsp;&nbsp;System.out.println(i);<br>
+}
+</div>
+<h2>Nested Loops</h2>
+<p>It is also possible to place a loop inside another loop. This is called a
+<strong>nested loop</strong>.</p>
+<p>The "inner loop" will be executed one time for each iteration of the "outer loop":</p>
+<div>
+<h3>Example</h3>
+// Outer loop<br>
+for (int i = 1; i &lt;= 2; i++) {<br>
+  System.out.println(&quot;Outer: &quot; + i); // Executes 2 times<br>
+  // Inner loop<br>
+  for (int j = 1; j &lt;= 3; j++) {<br>
+    System.out.println(&quot; Inner: &quot; + j); // Executes 6 times (2 * 3)<br>
+  }<br>
+} 
+</div>
+<h1>Java Break and Continue</h1>
+<h2>Java Break</h2>
+<p>You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement.</p>
+<p>The break statement can also be used to jump out of a 
+<strong>loop</strong>.</p>
+<p>This example stops the loop when i is equal to 4:</p>
+<div>
+<h3>Example</h3>
+for (int i = 0; i &lt; 10; i++) {<br>
+&nbsp; if (i == 4) {<br>
+&nbsp;&nbsp;&nbsp; break;<br>
+&nbsp; }<br>
+&nbsp; System.out.println(i);<br>
+}
+</div>
+<h2>Java Continue</h2>
+<p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+<p>This example skips the value of 4:</p>
+<div>
+<h3>Example</h3>
+for (int i = 0; i &lt; 10; i++) {<br>
+&nbsp; if (i == 4) {<br>
+&nbsp;&nbsp;&nbsp; continue;<br>
+&nbsp; }<br>
+&nbsp; System.out.println(i);<br>
+}
+</div>
+<h2>Break and Continue in While Loop</h2>
+<p>You can also use break and continue in while loops:</p>
+<div>
+<h3>Break Example</h3>
+int i = 0;<br>
+while (i &lt; 10) {<br>
+&nbsp;&nbsp;System.out.println(i);<br>
+&nbsp;&nbsp;i++;<br>
+&nbsp;&nbsp;if (i == 4) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp; }<br>
+</div>
+<div>
+<h3>Continue Example</h3>
+int i = 0;<br>
+while (i &lt; 10) {<br>
+&nbsp;&nbsp;if (i == 4) {<br>
+&nbsp;&nbsp;&nbsp; i++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;continue;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;System.out.println(i);<br>
+&nbsp;&nbsp;i++;<br>
+}
+</div>
+</body>
+</html>
