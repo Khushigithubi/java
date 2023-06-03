@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="E:\html basic programs\download.png" type="image/x.icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>j5</title>
+    <title>Java statements</title>
 </head>
-<body>
-    <h1>Java If ... Else</h1>
-<h2>Java Conditions and If Statements</h2>
+<body class="body">
+    <h1 class="head">Java If ... Else</h1>
+<h2 class="head">Java Conditions and If Statements</h2>
 <p>You already know that Java supports the usual logical conditions from mathematics:</p>
 <ul>
 <li>Less than: a &lt; b</li>
@@ -26,27 +27,27 @@
   <li>Use else if to specify a new condition to test, if the first condition is false</li>
   <li>Use switch to specify many alternative blocks of code to be executed</li>
 </ul>
-<h2>The if Statement</h2>
+<h2 class="head">The if Statement</h2>
 <p>Use the if statement to specify a block of Java code to be executed if a condition is true.</p>
-<div>
+<div class="example">
 <h3>Syntax</h3>
 if (<em>condition</em>) {<br>
 &nbsp; <em>// block of code to be executed if the condition is true</em><br>
 }
 </div>
-<div>
+<div class="different">
 <p><b>Note that if is in lowercase letters. Uppercase letters (If or IF) will generate an error.</b></p>
 </div>
 <p>In the example below, we test two values to find out if 20 is greater than 
 18. If the condition is true, print some text:</p>
-<div>
+<div class="example">
 <h3>Example</h3>
 if (20 &gt; 18) {<br>
 &nbsp; System.out.println(&quot;20 is greater than 18&quot;);<br>
 }
 </div>
 <p>We can also test variables:</p>
-<div>
+<div class="example">
 <h3>Example</h3>
 int x = 20;<br>
 int y = 18;<br>
@@ -54,9 +55,9 @@ if (x &gt; y) {<br>
 &nbsp; System.out.println(&quot;x is greater than y&quot;);<br>
 }
 </div>
-<h2>The else Statement</h2>
+<h2 class="head">The else Statement</h2>
 <p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
-<div>
+<div class="example">
 <h3>Syntax</h3>
 if (<em>condition</em>) {<br>
 &nbsp; <em>// block of code to be executed if the condition is true</em><br>
@@ -64,7 +65,7 @@ if (<em>condition</em>) {<br>
 &nbsp; <em>// block of code to be executed if the condition is false</em><br>
 }
 </div>
-<div>
+<div class="example">
 <h3>Example</h3>
 int time = 20;<br>
 if (time &lt; 18) { <br>
@@ -74,13 +75,13 @@ if (time &lt; 18) { <br>
 }<br>
 // Outputs &quot;Good evening.&quot;
 </div>
-<h4>Example explained</h4>
+<h4 class="head">Example explained</h4>
 <p>In the example above, time (20) is greater than 18, so the condition is false. 
 Because of this, we move on to the else condition and print to the screen "Good 
 evening". If the time was less than 18, the program would print &quot;Good day&quot;.</p>
-<h2>The else if Statement</h2>
+<h2 class="head" >The else if Statement</h2>
 <p>Use the else if statement to specify a new condition if the first condition is false.</p>
-<div>
+<div class="example">
 <h3>Syntax</h3>
 if (<em>condition1</em>) {<br>
 &nbsp; <em>// block of code to be executed if condition1 is true</em><br>
@@ -90,7 +91,7 @@ if (<em>condition1</em>) {<br>
 &nbsp; <em>// block of code to be executed if the condition1 is false and condition2 is false</em><br>
 }
 </div>
-<div>
+<div class="example">
 <h3>Example</h3>
 int time = 22;<br>
 if (time &lt; 10) {<br>
@@ -101,10 +102,10 @@ if (time &lt; 10) {<br>
 &nbsp; System.out.println(&quot;Good evening.&quot;);<br>
 }
 </div>
-<h2>Java Switch Statements</h2>
+<h2 class="head">Java Switch Statements</h2>
 <p>Instead of writing <strong>many</strong>if..else statements, you can use the switch statement.</p>
 <p>The switch statement selects one of many code blocks to be executed:</p>
-<div>
+<div class="example">
 <h3>Syntax</h3>
 switch(<em>expression</em>) {<br>
 &nbsp; case x:<br>
@@ -125,7 +126,7 @@ switch(<em>expression</em>) {<br>
 <li>The break and default keywords are optional, and will be described later in this chapter</li>
 </ul>
 <p>The example below uses the weekday number to calculate the weekday name:</p>
-<div>
+<div class="example">
 <h3>Example</h3>
 int day = 4;<br>
 switch (day) {<br>
@@ -153,20 +154,20 @@ switch (day) {<br>
 }<br>
 // Outputs &quot;Thursday&quot; (day 4)
 </div>
-<h2>The break Keyword</h2>
+<h2 class="head">The break Keyword</h2>
 <p>When Java reaches a break 
 keyword, it breaks out of the switch block.</p>
 <p>This will stop the execution of more code and case testing inside 
 the block.</p>
 <p>When a match is found, and the job is done, it's time for a break. There is no need for more testing.</p>
-<div>
+<div class="different">
 <p>A break can save a lot of execution time because it &quot;ignores&quot; the execution 
 of all the rest of the code in the switch block.</p>
 </div>
-<h2>The default Keyword</h2>
+<h2 class="head">The default Keyword</h2>
 <p>The default keyword specifies some code to run if there is no 
 case match:</p>
-<div>
+<div class="example">
 <h3>Example</h3>
 int day = 4;<br>
 switch (day) {<br>
@@ -181,5 +182,58 @@ switch (day) {<br>
 }<br>
 // Outputs &quot;Looking forward to the Weekend&quot;
 </div>
+<div>
+  <a class="button" href="j4.html">&#10094; Previous</a>
+  <a class="button" style="float:right;" href="j6.html">Next &#10095;</a>
+  </div>
+<style>
+  .body{
+            background-color: #DDC3A5;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-size: 20px;
+        }
+
+        p{
+            color:#201E20 ;
+        }
+
+        .head{
+            color:  #ea8b27;
+         }
+
+         .button{
+            background-color: white;
+           color: black;
+           display: inline-block;
+           padding: 8px 16px;
+        }
+
+        .example{
+            display:block ;
+            background-color: #ddd;
+            width:400px;
+            position: relative;
+            animation-name: hello;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+         }
+
+         @keyframes hello{
+            from{
+                width:0px;
+            }
+            to{
+                width: 400px;
+            }
+         } 
+
+         .different{
+          display:block;
+          background-color: rgb(246, 178, 8);
+          width:750px;
+         }
+</style>
 </body>
 </html>

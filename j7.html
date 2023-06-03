@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="E:\html basic programs\download.png" type="image/x.icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java array</title>
+</head>
+<body class="body">
+    <h1 class="head">Java Arrays</h1>
+<p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each 
+value.</p>
+<p>To declare an array, define the variable type with <strong>square brackets</strong>:</p>
+<div class="example">
+String[] cars;
+</div>
+<p>We have now declared a variable that holds an array of strings. To insert 
+values to it, you can place the values in a 
+comma-separated list, inside curly braces:</p>
+<div class="example">
+String[] cars = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};
+</div>
+<p>To create an array of integers, you could write:</p>
+<div class="example">
+int[] myNum = {10, 20, 30, 40};
+</div>
+<h2 class="head">Access the Elements of an Array</h2>
+<p>You can access an array element by referring to the index number.</p>
+<p>This statement accesses the value of the first element in cars:</p>
+<div class="example">
+<h3>Example</h3>
+String[] cars = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};<br>
+System.out.println(cars[0]);<br>
+// Outputs Volvo
+</div>
+<div class="different">
+<p><strong>Note:</strong> Array indexes start with 0: [0] is the first element. [1] is the second 
+element, etc.</p>
+</div>
+<h2 class="head">Change an Array Element</h2>
+<p>To change the value of a specific element, refer to the index number:</p>
+<div class="example">
+<h3>Example</h3>
+cars[0] = &quot;Opel&quot;;
+</div>
+<div class="example">
+<h3>Example</h3>
+String[] cars = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};<br>
+cars[0] = &quot;Opel&quot;;<br>
+System.out.println(cars[0]);<br>
+// Now outputs Opel instead of Volvo
+</div>
+<h2 class="head">Array Length</h2>
+<p> 
+To find out how many elements an array has, use the length property:</p>
+<div class="example">
+<h3>Example</h3>
+String[] cars = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};<br>
+System.out.println(cars.length);<br>
+// Outputs 4
+</div>
+<h1 class="head">Java Arrays Loop</h1>
+<h2 class="head">Loop Through an Array</h2>
+<p>You can loop through the array elements with the for loop, and use the length
+property to specify how many times the loop should run.</p>
+<p>The following example outputs all elements in the <strong>cars</strong> 
+array:</p>
+<div class="example">
+<h3>Example</h3>
+String[] cars = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};<br>
+for (int i = 0; i &lt; cars.length; i++) {<br>
+&nbsp; System.out.println(cars[i]);<br>
+}
+</div>
+<h2 class="head">Loop Through an Array with For-Each</h2>
+<p>There is also a "<b>for-each</b>" loop, which is used exclusively to loop through elements in arrays:</p>
+<div class="example">
+<h3>Syntax</h3>
+for (<em>type</em> <em>variable</em> : <em>arrayname</em>) {<br>
+&nbsp; ...<br>
+}
+</div>
+<p>The following example outputs all elements in the <strong>cars</strong> 
+array, using a "<b>for-each</b>" loop:</p>
+<div class="example">
+<h3>Example</h3>
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};<br>
+for (String i : cars) {<br>
+&nbsp; System.out.println(i);<br>
+}
+</div>
+<p>The example above can be read like this: <strong>for each</strong> String element (called 
+<strong>i</strong> - as in 
+<strong>i</strong>ndex) in <strong>cars</strong>, print out the value of<strong> i</strong>.</p>
+<p>If you compare the for loop and <strong>for-each</strong> loop, you will see that the <b>for-each</b> method is easier to write, it 
+does not require a counter (using the length property), and it is more readable.</p>
+<h1 class="head">Java Multi-Dimensional Arrays</h1>
+<p>A multidimensional array is an array of arrays.</p>
+<p>Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.</p>
+<p>To create a two-dimensional array, add each array within its own set of 
+<strong>curly braces</strong>:</p>
+<div class="example">
+<h3>Example</h3>
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+</div>
+<p><strong>myNumbers</strong> is now an array with two arrays as its elements.</p>
+<h2 class="head">Access Elements</h2>
+<p>To access the elements of the <strong>myNumbers</strong> array, 
+specify two indexes: one for the array, and one for the element inside that array. 
+This example accesses the third element (2) in the second array (1) of 
+myNumbers:</p>
+<div class="example">
+<h3>Example</h3>
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };<br>
+System.out.println(myNumbers[1][2]); // Outputs 7
+</div>
+<div class="different">
+<p><strong>Remember that:</strong> Array indexes start with 0: [0] is the first element. [1] is the second element, etc.</p>
+</div>
+<h2 class="head">Change Element Values</h2>
+<p>You can also change the value of an element:</p>
+<div class="example">
+<h3>Example</h3>
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };<br>
+myNumbers[1][2] = 9;<br>
+System.out.println(myNumbers[1][2]); // Outputs 9 instead of 7
+</div>
+<h2 class="head">Loop Through a Multi-Dimensional Array</h2>
+<p>We can also use a for loop inside another for loop to get the elements of a two-dimensional array (we still have to point to the two indexes):</p>
+<div class="example">
+<h3>Example</h3>
+public class Main {<br>
+&nbsp; public static void main(String[] args) {<br>
+&nbsp;&nbsp;&nbsp; int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };<br>
+&nbsp;&nbsp;&nbsp; for (int i = 0; i &lt; myNumbers.length; ++i) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for(int j = 0; j &lt; myNumbers[i].length; ++j) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(myNumbers[i][j]);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; }<br>
+&nbsp; }<br>
+}
+</div>
+<div>
+    <a class="button" href="j6.html">&#10094; Previous</a>
+    <a class="button" style="float:right;" href="j8.html">Next &#10095;</a>
+    </div>
+<style>
+    .body{
+            background-color: #DDC3A5;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-size: 20px;
+        }
+
+        p{
+            color:#201E20 ;
+        }
+
+        .head{
+            color:  #ea8b27;
+         }
+
+         .button{
+            background-color: white;
+           color: black;
+           display: inline-block;
+           padding: 8px 16px;
+        }
+
+        .example{
+            display:block ;
+            background-color: #ddd;
+            width:400px;
+            position: relative;
+            animation-name: hello;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+         }
+
+         @keyframes hello{
+            from{
+                width:0px;
+            }
+            to{
+                width: 400px;
+            }
+         } 
+
+         .different{
+          display:block;
+          background-color: rgb(246, 178, 8);
+          width:750px;
+         }
+</style>
+</body>
+</html>

@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="E:\html basic programs\download.png" type="image/x.icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>j3</title>
+    <title>Java operators</title>
 </head>
-<body>
-    <h2>Java Type Casting</h2>
+<body class="body">
+    <h2 class="head">Java Type Casting</h2>
     <p>Type casting is when you assign a value of one primitive data type to another type.<br>
        In Java, there are two types of casting:</p>
     <ul><li>Widening Casting (automatically) - converting a smaller type to a larger type size<br>
         byte -> short -> char -> int -> long -> float -> double</li> 
         <li>Narrowing Casting (manually) - converting a larger type to a smaller size type<br>
         double -> float -> long -> int -> char -> short -> byte></li></ul>
-    <h2>Widening Casting</h2>    
+    <h2 class="head">Widening Casting</h2>    
     <p>Widening casting is done automatically when passing a smaller size type to a larger size type</p>
-    <p>Example:<br><br>
+    <div class="example">
+    <h3>Example:</h3>
         public class Main {<br>
             public static void main(String[] args) {<br>
               int myInt = 9;<br>
@@ -24,10 +26,11 @@
               System.out.println(myInt);  <br>    
               System.out.println(myDouble);   <br>
             }<br>
-          }</p>
-     <h2>Narrowing Casting</h2>    
+        }</div>
+     <h2 class="head">Narrowing Casting</h2>    
      <p>Narrowing casting must be done manually by placing the type in parentheses in front of the value</p> 
-     <p>Example:<br><br>
+     <div>
+     <h3>Example:</h3>
         public class Main {<br>
             public static void main(String[] args) {<br>
               double myDouble = 9.78d;<br>
@@ -35,11 +38,12 @@
               System.out.println(myDouble); <br>
               System.out.println(myInt); <br>    
             }<br>
-          }</p>
-          <h2>Java Operators</h2>
+          }</div>
+          <h2 class="head">Java Operators</h2>
           <p>Operators are used to perform operations on variables and values.<br>
            In the example below, we use the + operator to add together two values.</p>
-           <p>Example:<br>int x = 100 + 50;</p>
+           <div class="example">
+           <h3>Example:</h3>int x = 100 + 50;</div>
            <p>Java divides the operators into the following groups:</p>
            <ul><li>Arithmetic operators</li>
               <li>Assignment operators</li>
@@ -47,7 +51,7 @@
               <li>Logical operators</li>
               <li>Bitwise operators</li>
             </ul>
-            <h2>Arithmetic Operators</h2>
+            <h2 class="head">Arithmetic Operators</h2>
             <p>Arithmetic operators are used to perform common mathematical operations.</p>
             <table>
                 <tbody><tr>
@@ -100,13 +104,15 @@
                 </tr>
                 </tbody>
                 </table>
-                <h2>Java Assignment Operators</h2>
+                <h2 class="head">Java Assignment Operators</h2>
                 <p>Assignment operators are used to assign values to variables.</p>
                 <p>In the example below, we use the <strong>assignment</strong> operator
                 to assign the value <strong>10</strong> to a variable called <strong>x</strong>:</p>
-                <p>Example<br><br>int x = 10;</p>
+                <div class="example">
+                <h3>Example</h3>>int x = 10;</div>
                 <p>The <strong>addition assignment</strong> operator (+=) adds a value to a variable:</p>
-                <p>Example<br><br>int x = 10;<br>x += 5;</p>
+                <div class="example">
+                <h3>Example</h3>>int x = 10;<br>x += 5;</div>
                 <p>A list of all assignment operators:</p>
                 <table>
                 <tr>
@@ -170,15 +176,16 @@
                 <td>x = x &lt;&lt; 3</td>
                 </tr>
                 </table>
-                <h2>Java Comparison Operators</h2>
+                <h2 class="head">Java Comparison Operators</h2>
                 <p>Comparison operators are used to compare two values (or variables). This is important in programming, because it helps us to find answers and make decisions.</p>
                 <p>The return value of a comparison is either true or false. These values are known as 
                 <em>Boolean values</em></p>
                 <p>In the following example, we use the <strong>greater than</strong> operator (>) to find out if 5 is greater than 3:</p>
-                <p>Example<br><br>
+                <div class="example">
+                <h3>Example</h3>
                  int x = 5;<br>
                 int y = 3;<br>
-                System.out.println(x &gt; y);</p>
+                System.out.println(x &gt; y);</div>
                 <table>
                 <tr>
                 <th style="width:25%">Operator</th>
@@ -216,7 +223,7 @@
                 <td>x &lt;= y</td>
                 </tr>
                 </table>
-                 <h2>Java Logical Operators</h2>
+                 <h2 class="head">Java Logical Operators</h2>
                 <p>You can also test for true or false values with logical operators.</p>
                 <p>Logical operators are used to determine the logic between variables or  values:</p>
                 <table>
@@ -245,6 +252,60 @@
                 <td>!(x &lt; 5 &amp;&amp; x &lt; 10)</td>
                 </tr>
                 </table>
+                <div>
+                  <a class="button" href="j2.html">&#10094; Previous</a>
+                  <a class="button" style="float:right;" href="j4.html">Next &#10095;</a>
+                  </div>
+                  <style>
+                     .body{
+            background-color: #DDC3A5;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-size: 20px;
+        }
+
+        p{
+            color:#201E20 ;
+        }
+
+        .head{
+            color: #ea8b27 ;
+         }
+
+         table, td, th {
+            border-collapse: collapse;
+            border: 1px solid;
+         }
+
+         .button{
+            background-color: white;
+           color: black;
+           display: inline-block;
+           padding: 8px 16px;
+        }
+
+        .example{
+            display:block ;
+            background-color: #ddd;
+            width:400px;
+            position: relative;
+            animation-name: hello;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+         }
+
+         @keyframes hello{
+            from{
+                width:0px;
+            }
+            to{
+                width: 400px;
+            }
+         } 
+    
+
+                  </style>
                
 </body>
 </html>
