@@ -8,6 +8,18 @@
     <title>Java array</title>
 </head>
 <body class="body">
+    <div class="topnav">
+        <a  href="index.html">Home</a>
+        <a  href="j2.html">Java  variables</a>
+        <a  href="j3.html">Java  operators</a>
+        <a  href="j4.html">Java strings</a>
+        <a href="j5.html">Java statements</a>
+        <a href="j6.html">Java loops</a>
+        <a class="active" href="j7.html">Java array</a>
+        <a href="j8.html">Java methods</a>
+        <a href="j9.html">Java Scope</a>
+        <a href="j10.html">Java OOP</a>
+      </div>
     <h1 class="head">Java Arrays</h1>
 <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each 
 value.</p>
@@ -170,12 +182,13 @@ public class Main {<br>
         .example{
             display:block ;
             background-color: #ddd;
-            width:400px;
+            width:700px;
             position: relative;
             animation-name: hello;
             animation-duration: 2s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
+            text-align: center;
          }
 
          @keyframes hello{
@@ -183,7 +196,7 @@ public class Main {<br>
                 width:0px;
             }
             to{
-                width: 400px;
+                width: 700px;
             }
          } 
 
@@ -191,6 +204,31 @@ public class Main {<br>
           display:block;
           background-color: rgb(246, 178, 8);
           width:750px;
+         }
+
+         .topnav {
+        background-color: #333;
+        overflow: hidden;
+      }
+
+
+       .topnav a {
+         float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+       }
+
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+         }
+
+        .topnav a.active {
+           background-color: black;
+           color: white;
          }
 </style>
 </body>
